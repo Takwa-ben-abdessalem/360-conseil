@@ -341,7 +341,7 @@ const IsolationThermiqueEx: React.FC = () => {
                   <Mail size={24} className="text-white mr-4 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-lg">Email</p>
-                    <p className="text-base">contact@groupeverlaine.com</p>
+                    <p className="text-base">contact@360conseil.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -518,7 +518,7 @@ const IsolationThermiqueEx: React.FC = () => {
                   htmlFor="receiveUpdates"
                   className="ml-2 block text-sm text-gray-700"
                 >
-                  Recevoir par email/SMS les actualités Groupe Verlaine
+                  Recevoir par email/SMS les actualités 360 conseil
                 </label>
               </div>
 

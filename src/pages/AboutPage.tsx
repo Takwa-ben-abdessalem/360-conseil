@@ -27,7 +27,7 @@ const AboutHeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative z-10 text-white p-6 md:p-12">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-          Le Groupe 360 conseil
+          360 Conseil
         </h1>
         <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
           Votre partenaire de confiance pour l'innovation et la performance
