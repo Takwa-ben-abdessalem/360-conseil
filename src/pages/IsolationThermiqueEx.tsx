@@ -96,16 +96,16 @@ const IsolationThermiqueEx: React.FC = () => {
           {/* Image Héro (Droite) */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-end relative animate-fade-in-right">
             <img
-              src="https://placehold.co/500x350/F0F4F8/2A3F6D?text=Expert+Conseil+360" // Placeholder for expert image
+              src="https://particulier.hellio.com/hubfs/Blog%20Particuliers%20-%20Images/isolation-murs-exterieur-ite-mains-metre.jpeg" // Placeholder for expert image
               alt="Expert 360 conseil"
               className="rounded-xl shadow-2xl w-full max-w-md h-auto object-cover"
             />
             {/* Logo sur l'image */}
-            <img
+            {/* <img
               src="/360-logo.png" // Using the provided logo
               alt="360 conseil Logo"
               className="absolute bottom-4 right-4 h-20 w-auto bg-white p-2 rounded-lg shadow-md"
-            />
+            /> */}
           </div>
         </div>
       </section>
@@ -145,17 +145,17 @@ const IsolationThermiqueEx: React.FC = () => {
             <div className="flex flex-col lg:flex-row items-center gap-10">
               <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <img
-                  src="https://placehold.co/200x200/ADD8E6/000000?text=Mur+Ancien"
+                  src="https://www.papierpeintpanoramique.fr/media/catalog/product/w/0/w04166-square.jpg"
                   alt="Mur Ancien"
                   className="rounded-lg shadow-md object-cover w-full h-auto"
                 />
                 <img
-                  src="https://placehold.co/200x200/87CEEB/000000?text=Pose+Isolant"
+                  src="https://m.media-amazon.com/images/I/51Rw6DqLpjS._AC_UF350,350_QL80_.jpg"
                   alt="Pose Isolant"
                   className="rounded-lg shadow-md object-cover w-full h-auto"
                 />
                 <img
-                  src="https://placehold.co/200x200/4682B4/FFFFFF?text=Facade+Neuve"
+                  src="https://media.adeo.com/media/3417543/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds"
                   alt="Façade Neuve"
                   className="rounded-lg shadow-md object-cover w-full h-auto"
                 />

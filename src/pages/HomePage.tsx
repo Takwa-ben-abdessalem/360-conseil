@@ -45,10 +45,43 @@ const HeroSection: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Formulaire soumis:", formData);
     // Logique pour envoyer les données
+    try {
+      const response = await fetch("http://localhost:5000/api/devis", {
+        // L'URL de votre backend
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message); // Afficher le message de succès du backend
+        setFormData({
+          // Réinitialiser le formulaire
+          nom: "",
+          prenom: "",
+          telephone: "",
+          mail: "",
+          ville: "",
+          codePostal: "",
+          typeProjet: "",
+        });
+      } else {
+        alert(`Erreur: ${data.message || "Quelque chose s'est mal passé."}`);
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'envoi du devis :", error);
+      alert(
+        "Impossible de soumettre la demande. Veuillez réessayer plus tard."
+      );
+    }
   };
 
   return (
@@ -195,13 +228,15 @@ const HeroSection: React.FC = () => {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
               >
-                <option value="">Sélectionnez un type</option>
-                <option value="site-web">Création de Site Web</option>
-                <option value="app-mobile">
-                  Développement Application Mobile
+                <option value="">Sélectionnez un type de projet *</option>
+                <option value="panneaux-solaires">Panneaux solaires</option>
+                <option value="isolation-exterieure">
+                  Isolation extérieure
                 </option>
-                <option value="seo">Référencement SEO</option>
-                <option value="marketing">Stratégie Marketing Digital</option>
+                <option value="pompe-a-chaleur">Pompe à chaleur</option>
+                <option value="isolation-interieure">
+                  Isolation intérieure
+                </option>
                 <option value="autre">Autre</option>
               </select>
             </div>
@@ -448,10 +483,44 @@ const ContactSection: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Formulaire de contact soumis:", formData);
     // Ici, vous pouvez ajouter la logique pour envoyer les données (ex: à une API)
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        // L'URL de votre backend
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message); // Afficher le message de succès du backend
+        setFormData({
+          // Réinitialiser le formulaire
+          nomPrenom: "",
+          telephone: "",
+          email: "",
+          ville: "",
+          codePostal: "",
+          typeProjet: "",
+          receiveUpdates: false,
+        });
+      } else {
+        alert(`Erreur: ${data.message || "Quelque chose s'est mal passé."}`);
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'envoi du contact :", error);
+      alert(
+        "Impossible de soumettre le message. Veuillez réessayer plus tard."
+      );
+    }
+
     // Réinitialiser le formulaire après soumission (optionnel)
     setFormData({
       nomPrenom: "",
