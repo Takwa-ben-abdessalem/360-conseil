@@ -383,8 +383,8 @@ const InstallationPompeChaleur: React.FC = () => {
                   <MapPin size={24} className="text-white mr-4 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-lg">Adresse</p>
-                    <p className="text-base">123 Avenue de l'Innovation</p>
-                    <p className="text-base">75000 Paris, France</p>
+                    <p className="text-base">60 RUE FRANCOIS IER </p>
+                    <p className="text-base">75008 Paris, France</p>
                   </div>
                 </div>
               </div>

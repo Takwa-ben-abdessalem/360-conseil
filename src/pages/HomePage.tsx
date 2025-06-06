@@ -593,8 +593,8 @@ const ContactSection: React.FC = () => {
                 {/* Icônes blanches pour contraste */}
                 <div>
                   <p className="font-semibold text-lg">Adresse</p>
-                  <p className="text-base">123 Avenue de l'Innovation</p>
-                  <p className="text-base">75000 Paris, France</p>
+                  <p className="text-base">60 RUE FRANCOIS IER</p>
+                  <p className="text-base">75008 PARIS</p>
                 </div>
               </div>
             </div>
