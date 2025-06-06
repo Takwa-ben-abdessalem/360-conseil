@@ -4,7 +4,7 @@ import { Briefcase, Users, Award } from "lucide-react";
 
 const KeyFiguresSection: React.FC = () => {
   return (
-    <section className="py-16 bg-white text-gray-800">
+    <section id="keys" className="py-16 bg-white text-gray-800">
       {" "}
       {/* Changement de bg-blue-800 à bg-white et text-white à text-gray-800 */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">

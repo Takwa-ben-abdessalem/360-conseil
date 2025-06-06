@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
         </Link>
         <Link
           to="/"
-          onClick={() => scrollToSection("realisations")}
+          onClick={() => scrollToSection("keys")}
           className="text-gray-600 hover:text-blue-600 font-medium transition duration-300"
         >
           Nos Réalisations
