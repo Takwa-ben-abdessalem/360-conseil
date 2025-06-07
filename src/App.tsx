@@ -1,5 +1,5 @@
 // src/App.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Importez vos composants de layout
@@ -15,12 +15,6 @@ import IsolationThermiqueInt from "./pages/IsolationThermiqueInt";
 import InstallationPompeChaleur from "./pages/InstallationPompeChaleur";
 // import ContactFullPage from './pages/ContactFullPage'; // Si vous faites une page contact dédiée
 // import ActualitiesPage from './pages/ActualitiesPage'; // Si vous faites une page actualités dédiée
-
-const API_URL = process.env.REACT_APP_API_URL;
-
-fetch(`${API_URL}/ma-route`)
-  .then((res) => res.json())
-  .then((data) => console.log(data));
 
 // Composant pour une page 404
 const NoMatch: React.FC = () => {
@@ -41,6 +35,13 @@ const NoMatch: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
+  useEffect(() => {
+    fetch(`${API_URL}/route-test`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
   return (
     <Router>
       <div className="font-inter antialiased">
