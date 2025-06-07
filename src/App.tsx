@@ -16,6 +16,12 @@ import InstallationPompeChaleur from "./pages/InstallationPompeChaleur";
 // import ContactFullPage from './pages/ContactFullPage'; // Si vous faites une page contact dédiée
 // import ActualitiesPage from './pages/ActualitiesPage'; // Si vous faites une page actualités dédiée
 
+const API_URL = process.env.REACT_APP_API_URL;
+
+fetch(`${API_URL}/ma-route`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
 // Composant pour une page 404
 const NoMatch: React.FC = () => {
   return (
